@@ -12,7 +12,9 @@ export function LeadFormRulesFields() {
       <input
         id={key + "_rules"}
         type="number"
-        defaultValue={formData.task.rules[key]}
+        defaultValue={
+          formData.task.rules[key as keyof typeof formData.task.rules]
+        }
         className=" border border-solid border-indigo-800 rounded-md p-2"
       />
     </label>

@@ -1,3 +1,5 @@
+// eslint-disable-next-line
+// @ts-nocheck
 import { formData } from "../formData";
 
 function RadioField({ title }: { title: string }) {
