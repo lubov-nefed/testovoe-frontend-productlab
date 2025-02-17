@@ -4,7 +4,7 @@ import { formSubmit } from "../actions";
 import { TaskFields } from "./Fields";
 import { LeadFormRulesFields } from "./LeadFormRulesFields";
 
-export function LeadForm({ token }: { token: string }) {
+export function LeadForm({ token }: { token: string | undefined }) {
   const newToken = "317ad1fc-e0a9-11ef-a978-0242ac120007";
   const [state, action, isPending] = useActionState(formSubmit, null);
 

@@ -5,22 +5,22 @@ function RadioField({ title }: { title: string }) {
     <fieldset className="grid grid-cols-2 p-2 text-left">
       {title}
       <div>
-        <label htmlFor="true">
+        <label htmlFor={title + "true"}>
           true
           <input
             type="radio"
-            id="true"
+            id={title + "true"}
             name={title}
             value="true"
             defaultChecked
             className="m-2"
           />
         </label>
-        <label htmlFor="false">
+        <label htmlFor={title + "false"}>
           false
           <input
             type="radio"
-            id="false"
+            id={title + "false"}
             name={title}
             value="false"
             className="m-2"
@@ -31,7 +31,13 @@ function RadioField({ title }: { title: string }) {
   );
 }
 
-function TextOrNumberField({ title, type }: { title: string; type: string }) {
+function TextOrNumberField({
+  title,
+  type,
+}: {
+  title: string;
+  type: "text" | "number";
+}) {
   return (
     <>
       <label
